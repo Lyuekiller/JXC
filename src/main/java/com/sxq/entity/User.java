@@ -18,13 +18,13 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 	@Column(length=50)
-	private String userName;
+	private String userName;//用户名
 	@Column(length=50)
-	private String password;
+	private String password;//密码
 	@Column(length=50)
-	private String trueName;
+	private String trueName;//真实姓名
 	@Column(length=1000)
-	private String remarks;
+	private String remarks;//备注
 	public Integer getId() {
 		return id;
 	}

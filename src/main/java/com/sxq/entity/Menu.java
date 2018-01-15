@@ -18,7 +18,7 @@ public class Menu {
 	@GeneratedValue
 	private Integer id;
 	@Column(length=50)
-	private String name;
+	private String name;//菜单名称
 	@Column(length=200)
 	private String url;
 	

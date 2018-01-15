@@ -18,9 +18,9 @@ public class Role {
 	@GeneratedValue
 	private Integer id;
 	@Column(length=50)
-	private String name;
+	private String name;//角色名称
 	@Column(length=1000)
-	private String remarks;
+	private String remarks;//备注
 
 	public Integer getId() {
 		return id;
