@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * 用户实体
  * @author wzd
@@ -17,8 +19,10 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
+	@NotEmpty(message="请输入用户名")
 	@Column(length=50)
 	private String userName;//用户名
+	@NotEmpty(message="请输入密码")
 	@Column(length=50)
 	private String password;//密码
 	@Column(length=50)

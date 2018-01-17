@@ -23,6 +23,16 @@ canvas{z-index:-1;position:absolute;}
 	    lineColor: '#5cbdaa'
 	  });
 	  
+	  $('#loginBtn').click(function(){
+		  $.post("/user/login",{userName:$('#userName').val(),password:$('#password').val(),imageCode:$('#imageCode').val()},function(result){
+			  if(result.success){
+				  alert("登录成功");
+			  }else{
+				  alert(result.errorInfo);
+			  }
+		  });
+	  });
+	  
 
 	});
 	
@@ -53,8 +63,8 @@ canvas{z-index:-1;position:absolute;}
   <input type="button" id="loginBtn" value="立即登陆" class="submit_btn"/>
  </dd>
  <dd>
-  <p>© 2012-2017 南通小锋网络科技有限公司  版权所有</p>
-  <p><a href="http://www.java1234.com" target="_blank">Java知识分享网 </a></p>
+  <p>苏小轻</p>
+  <p><a href="https://weibo.com/2278105430/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">苏小轻的微博 </a></p>
  </dd>
 </dl>
 	<div id="light" class="white_content"> 
