@@ -4,7 +4,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.sxq.entity.User;
-
+/**
+ * 用户Repository接口
+ * @author wzd
+ *
+ */
 public interface UserRepository extends JpaRepository<User, Integer>{
 	/**
 	 * 根据userName查找对象
