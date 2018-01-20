@@ -26,12 +26,9 @@ canvas{z-index:-1;position:absolute;}
 	  $('#loginBtn').click(function(){
 		  $.post("/user/login",{userName:$('#userName').val(),password:$('#password').val(),imageCode:$('#imageCode').val()},function(result){
 			  if(result.success){
-				  alert("success");
 				  if(result.roleSize==1){
-					  	 alert("one");
 						 var roleId=result.roleList[0].id;
 					 }else{
-						 alert("not one");
 						 $("#roleList").empty();
 						 var roles=result.roleList;
 						 for(var i=0;i<roles.length;i++){
@@ -40,12 +37,10 @@ canvas{z-index:-1;position:absolute;}
 							 }else{
 								 $("#roleList").append("<input type='radio' name='role' value='"+roles[i].id+"'/>"+roles[i].name+"&nbsp;&nbsp;");
 							 }
-							 document.getElementById("light").style.display="block";
-						     document.getElementById("fade").style.display="block";
-							 
 						 }
 					 }
-				  
+				  document.getElementById("light").style.display="block";
+				  document.getElementById("fade").style.display="block";
 			  }else{
 				  alert(result.errorInfo);
 			  }

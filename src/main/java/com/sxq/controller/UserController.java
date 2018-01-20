@@ -67,7 +67,7 @@ public class UserController {
 			subject.login(token);//如果用户名和密码错误则会报错跳入catch的异常当中
 			User currentUser = userService.findByUserName(user.getUserName());
 			session.setAttribute("currentUser", currentUser);
-			List<Role> roleList = roleService.findRolesByUserId(user.getId());
+			List<Role> roleList = roleService.findRolesByUserId(currentUser.getId());
 			map.put("roleList", roleList);
 			map.put("roleSize", roleList.size());
 			map.put("success", true);
