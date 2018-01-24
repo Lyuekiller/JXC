@@ -17,4 +17,11 @@ public interface RoleService {
 	 * @return
 	 */
 	public List<Role> findRolesByUserId(Integer id);
+	
+	/**
+	 * 根据id查找实体
+	 * @param id
+	 * @return
+	 */
+	public Role findById(Integer id);
 }
